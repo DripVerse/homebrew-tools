@@ -5,20 +5,20 @@
 class Duck < Formula
   desc "P2P Chat"
   homepage "https://github.com/dripverse/duck"
-  version "1.1.0"
+  version "1.2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/DripVerse/duck/releases/download/v1.1.0/duck_Darwin_x86_64.tar.gz"
-      sha256 "367b56c3ce93d9e868dbb1e4b08a4259ac40095a0ae0c2dbc243538291d6db27"
+    if Hardware::CPU.arm?
+      url "https://github.com/DripVerse/duck/releases/download/v1.2.0/duck_Darwin_arm64.tar.gz"
+      sha256 "f4388d5b776fef176c1382410e1d09028ecd2796eef9d7e35178a103dc600097"
 
       def install
         bin.install "duck"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/DripVerse/duck/releases/download/v1.1.0/duck_Darwin_arm64.tar.gz"
-      sha256 "db7d6e31a6d48b1a63e5fe9882eca06d138465bee4b0b3b5d50d1a7482352f92"
+    if Hardware::CPU.intel?
+      url "https://github.com/DripVerse/duck/releases/download/v1.2.0/duck_Darwin_x86_64.tar.gz"
+      sha256 "0a7c77a3b42fef22b69cbf7bf929afde42d9402adccf35eb71e920ad0538c739"
 
       def install
         bin.install "duck"
@@ -28,16 +28,16 @@ class Duck < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/DripVerse/duck/releases/download/v1.1.0/duck_Linux_arm64.tar.gz"
-      sha256 "d5c3f1a2fc8e8ed54641a1a06d7b1c547a62730a83e9dfa8887be7ac628ce452"
+      url "https://github.com/DripVerse/duck/releases/download/v1.2.0/duck_Linux_arm64.tar.gz"
+      sha256 "943e3a8750dcd59e5889fd403f557e71550bedaa30c34523f812a5851b6173db"
 
       def install
         bin.install "duck"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/DripVerse/duck/releases/download/v1.1.0/duck_Linux_x86_64.tar.gz"
-      sha256 "a31432f294fcdf5c44767db250c73f1fc2f16f484bb5109c38f68d9661683b27"
+      url "https://github.com/DripVerse/duck/releases/download/v1.2.0/duck_Linux_x86_64.tar.gz"
+      sha256 "b08db9c7a6857c8d4f658eefb3d7a1a75fc62af8bdc2c7d93447b69b7bbaa47e"
 
       def install
         bin.install "duck"
